@@ -1,0 +1,34 @@
+.button_group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--gap);
+
+	.button {
+		text-wrap: nowrap;
+	}
+
+	/* // .button {
+	// 	display: flex;
+	// 	align-items: center;
+	// 	justify-content: center;
+	// 	width: fit-content;
+	// 	height: 42px;
+	// 	padding: var(--padding);
+	// 	cursor: pointer;
+	// 	color: var(--color-text);
+	// 	font-weight: inherit;
+	// 	background-color: transparent;
+	// 	border: var(--border);
+	// 	border-radius: var(--radius);
+	// 	gap: var(--gap);
+
+	// 	&:hover {
+	// 		background-color: var(--color-secondary);
+	// 	}
+	// }
+
+	// .active {
+	// 	border: var(--border-secondary);
+	// 	background-color: var(--color-ternary);
+	// } */
+}

@@ -1,0 +1,4 @@
+.divider {
+	background-color: var(--color-secondary);
+	border-radius: 16px;
+}

@@ -1,0 +1,28 @@
+.heading_section {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+
+	/* padding: 8px; */
+	color: var(--color-text);
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		padding: 8px;
+
+		.title {
+			font-size: var(--text-size-h4);
+			font-weight: bold;
+		}
+		.actions {
+		}
+	}
+
+	.content {
+		display: flex;
+		gap: 8px;
+		padding: 8px;
+	}
+}

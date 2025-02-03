@@ -1,0 +1,133 @@
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: fit-content;
+	padding: 8px 12px;
+
+	border: 2px solid transparent;
+	border-radius: 16px;
+	gap: 4px;
+	font: inherit;
+
+	cursor: pointer;
+	transition: var(--animation);
+
+	text-decoration: none;
+
+	&:active {
+		scale: 95%;
+	}
+}
+
+.button[data-variant="primary"] {
+	color: var(--color-alttext);
+	background-color: var(--color-primary);
+}
+
+.button[data-variant="outline"] {
+	color: var(--color-text);
+	background-color: transparent;
+	border: 2px solid var(--color-secondary);
+
+	@media (hover: hover) {
+		&:hover {
+			/* border: 2px solid var(--color-secondary); */
+			/* background-color: var(--color-ternary); */
+		}
+	}
+}
+
+.button[data-variant="secondary"] {
+	color: var(--color-text);
+	background-color: var(--color-secondary);
+}
+
+.button[data-variant="background"] {
+	color: var(--color-primary);
+	background-color: var(--color-background);
+}
+
+.button[data-variant="ghost"] {
+	color: var(--color-text);
+	background-color: transparent;
+
+	@media (hover: hover) {
+		&:hover {
+			color: var(--color-text);
+			background-color: var(--color-ternary);
+		}
+	}
+}
+
+.button[data-aslink="true"] {
+	padding: 0;
+	> * {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		font-size: var(--text-size-body);
+		color: var(--color-text);
+		padding: 4px 8px;
+	}
+}
+
+.button[data-circle="true"] {
+	padding: 8px;
+	border-radius: 50%;
+}
+
+.button[data-disabled="true"] {
+	color: var(--color-subtext);
+	background-color: var(--color-ternary-80);
+}
+
+.button[data-variant="gradient"] {
+	color: var(--color-alttext);
+	background: linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
+
+	&:hover {
+		color: var(--color-alttext);
+		background: linear-gradient(180deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
+	}
+}
+
+.button[data-variant="animego"] {
+	color: var(--color-text);
+	background-color: var(--color-animego);
+
+	&:hover {
+		color: var(--color-text);
+		background-color: var(--color-animego)-hover;
+	}
+}
+.button[data-variant="hanime"] {
+	color: var(--color-text);
+	background-color: var(--color-hanime);
+
+	&:hover {
+		color: var(--color-text);
+		background-color: var(--color-hanime)-hover;
+	}
+}
+.button[data-variant="nhentai"] {
+	color: var(--color-text);
+	background-color: var(--color-nhentai);
+
+	&:hover {
+		color: var(--color-text);
+		background-color: var(--color-nhentai)-hover;
+	}
+}
+
+.button[data-variant="shikimori"] {
+	color: var(--color-primary);
+	background-color: var(--color-shikimori);
+
+	&:hover {
+		color: var(--color-primary);
+		background-color: var(--color-shikimori)-hover;
+	}
+}

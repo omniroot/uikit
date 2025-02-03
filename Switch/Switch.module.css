@@ -1,0 +1,48 @@
+.switch {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+	padding: 8px;
+
+	.right {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.checkbox {
+		width: 60px;
+		height: 35px;
+		display: flex;
+		align-items: center;
+
+		padding: 8px 6px;
+		background-color: var(--color-secondary);
+		border-radius: 32px;
+		cursor: pointer;
+		transition: background-color 300ms;
+
+		&[data-disabled="true"] {
+			cursor: auto;
+			filter: brightness(0.8);
+		}
+
+		.state {
+			width: 20px;
+			height: 20px;
+			background-color: var(--color-ternary);
+			border-radius: 50%;
+			transition: background-color 300ms;
+
+			&[data-enabled="true"] {
+				background-color: var(--color-primary);
+			}
+
+			&[data-disabled="true"] {
+				/* background-color: var(--color-ternary); */
+			}
+		}
+	}
+}

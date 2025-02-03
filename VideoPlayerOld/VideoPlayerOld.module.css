@@ -1,0 +1,126 @@
+.container {
+	width: 350px;
+	height: 200px;
+	position: relative;
+
+	background-color: var(--color-background);
+	border: 2px solid var(--color-secondary);
+	border-radius: 16px;
+
+	.player {
+		width: 100%;
+		height: 100%;
+		border-radius: 16px;
+	}
+
+	.overlay {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		border-radius: 16px;
+
+		background-color: rgba(27, 26, 26, 0.699);
+
+		.top {
+			width: 100%;
+
+			padding: 8px;
+		}
+
+		.center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+		}
+
+		.bottom {
+			position: relative;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 8px;
+			gap: 8px;
+
+			.preview_container {
+				width: 120px;
+				position: absolute;
+
+				.preview_video {
+					width: 100%;
+					height: 100%;
+
+					border: 2px solid var(--color-secondary);
+					border-radius: 16px;
+				}
+			}
+
+			.timeline_container {
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 6px;
+				transition: height 250ms;
+
+				&:hover {
+					height: 12px;
+				}
+
+				.timeline {
+					display: flex;
+					min-width: 100%;
+					min-height: 100%;
+					background-color: var(--color-ternary);
+					border-radius: 16px;
+				}
+				.position {
+					position: absolute;
+					height: 100%;
+					background-color: var(--color-secondary);
+					touch-action: none;
+					user-select: none;
+					border-radius: 16px;
+
+					&::after {
+						position: absolute;
+						content: "";
+						width: 10px;
+						height: 15px;
+						right: -5px;
+						top: 50%;
+						border-radius: 8px;
+
+						translate: 0 -50%;
+
+						background-color: var(--color-primary);
+					}
+				}
+			}
+
+			.controls {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				.fullscreen_button {
+					width: 35px;
+					height: 35px;
+				}
+			}
+		}
+	}
+}
+
+/* video::-webkit-media-controls { */
+/* display: none !important; */
+/* } */

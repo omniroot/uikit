@@ -1,0 +1,30 @@
+.form {
+	display: flex;
+	justify-content: space-between;
+	background-color: transparent;
+	border: 2px solid var(--color-secondary);
+	border-radius: 12px;
+	padding: 8px 12px;
+	transition: var(--animation);
+
+	&:focus-within {
+		border: 2px solid var(--color-primary);
+	}
+	.input {
+		width: 100%;
+		color: var(--color-text);
+		background-color: transparent;
+		font-size: var(--text-size-h5);
+		border: none;
+		outline: none;
+	}
+	.actions {
+		display: flex;
+		gap: var(--gap);
+
+		.button {
+			border: none;
+			padding: none;
+		}
+	}
+}

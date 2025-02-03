@@ -1,0 +1,33 @@
+.content {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.dialog {
+	width: 400px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+
+	background-color: var(--color-secondary);
+
+	padding: 12px 12px;
+	border-radius: 16px;
+
+	.description {
+		color: var(--color-subtext);
+	}
+
+	.actions {
+		display: flex;
+		gap: 8px;
+		justify-content: flex-end;
+
+		.cancel_button {
+		}
+	}
+}

@@ -1,0 +1,33 @@
+.tooltip_container {
+	position: relative;
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+
+	.tooltip {
+		width: max-content;
+		/* min-height: 40px; */
+		max-width: 300px;
+		text-wrap-mode: nowrap;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+
+		background-color: var(--color-secondary);
+		border-radius: 16px;
+		padding: 4px 8px;
+		z-index: 100000;
+	}
+
+	.tooltip[data-position="top"] {
+		top: -50px;
+	}
+	.tooltip[data-position="bottom"] {
+		bottom: -50px;
+	}
+
+	.showed {
+	}
+}
