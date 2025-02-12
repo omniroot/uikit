@@ -98,7 +98,7 @@ export const BottomSheet: FC<IBottomSheetProps> = ({
 	const _class = clsx(styles.bottom_sheet, className);
 
 	return (
-		<Portal isShow={isShow} onClose={() => onOutsideClick()}>
+		<Portal isShow={isShow} onClose={onOutsideClick}>
 			<motion.div
 				initial={{ y: 250 }}
 				animate={{ y: 0 }}
