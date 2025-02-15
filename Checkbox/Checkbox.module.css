@@ -1,0 +1,30 @@
+.checkbox {
+	width: 24px;
+	height: 24px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.input {
+		position: absolute;
+		opacity: 0;
+	}
+
+	.indicator {
+		width: 24px;
+		height: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 8px;
+		border: 2px solid var(--color-ternary);
+		transition: border-radius 150ms;
+	}
+
+	.input:checked + .indicator {
+		background-color: var(--color-primary);
+		border-color: var(--color-primary);
+		border-radius: 50%;
+	}
+}
