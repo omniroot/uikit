@@ -11,7 +11,12 @@ interface ICheckboxProps {
 export const Checkbox: FC<ICheckboxProps> = ({ checked, onChange }) => {
 	return (
 		<div className={styles.checkbox} onClick={() => onChange(!checked)}>
-			<input type="checkbox" checked={checked} className={styles.input} />
+			<input
+				type="checkbox"
+				checked={checked}
+				onChange={() => onChange(!checked)}
+				className={styles.input}
+			/>
 			<motion.div
 				className={styles.indicator}
 				initial={{ scale: 0.8 }}
