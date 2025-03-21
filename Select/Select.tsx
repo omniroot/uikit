@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./Select.module.css";
 import { RightArrowIcon } from "@/shared/assets/icons/RightArrowIcon.tsx";
+import { Portal } from "@ui/Portal/Portal.tsx";
 
 export interface ISelectOption {
 	value: string;
@@ -102,8 +103,7 @@ export const Select: React.FC<ISelectProps> = ({
 					className={`${styles.arrow} ${isOpen ? styles.arrowOpen : ""}`}
 				/>
 			</div>
-
-			{isOpen && (
+			<Portal isShow={isOpen} onClose={() => setIsOpen(false)}>
 				<ul className={styles.optionsContainer} role="listbox" ref={optionsContainerRef}>
 					{options.map((option) => (
 						<li
@@ -122,7 +122,7 @@ export const Select: React.FC<ISelectProps> = ({
 						</li>
 					))}
 				</ul>
-			)}
+			</Portal>
 		</div>
 	);
 };
