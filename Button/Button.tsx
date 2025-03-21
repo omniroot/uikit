@@ -20,6 +20,7 @@ interface IButtonProps
 		| "gradient"
 		| "animego"
 		| "hanime"
+		| "delete"
 		| "nhentai"
 		| "shikimori";
 	circle?: boolean;
