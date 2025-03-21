@@ -28,6 +28,12 @@ export const Portal: FC<IPortalProps> = ({
 		};
 	}, [isShow]);
 
+	const onOutsideClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+		event.preventDefault();
+		event.stopPropagation();
+		onClose();
+	};
+
 	const element = (
 		<AnimatePresence>
 			{isShow && (
@@ -36,7 +42,7 @@ export const Portal: FC<IPortalProps> = ({
 					animate={{ opacity: 1, backdropFilter: "blur(12px)" }}
 					exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
 					transition={{ duration: 0.2 }}
-					onClick={onClose}
+					onClick={onOutsideClick}
 					className={styles.container}
 					data-layout-position={layoutPosition}
 				>
