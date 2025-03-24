@@ -42,6 +42,14 @@ export const Input: FC<IInputProps> = ({
 	// 	inputRef.current?.focus();
 	// }, [searchAnimesIsLoading]);
 
+	const onFormClick = () => {
+		console.log(document.activeElement == inputRef.current);
+
+		if (document.activeElement !== inputRef.current) {
+			inputRef.current?.focus();
+		}
+	};
+
 	const onInputSubmit = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		event.stopPropagation();
@@ -50,7 +58,7 @@ export const Input: FC<IInputProps> = ({
 	const _classForm = clsx(styles.form, classNames?.form);
 	const _classInput = clsx(styles.input, classNames?.input);
 	return (
-		<form className={_classForm} onSubmit={onInputSubmit}>
+		<form className={_classForm} onSubmit={onInputSubmit} onClick={onFormClick}>
 			<input
 				className={_classInput}
 				value={value}
