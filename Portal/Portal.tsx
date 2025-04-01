@@ -1,4 +1,4 @@
-import { ReactNode, FC, useEffect } from "react";
+import { ReactNode, FC, useEffect, useLayoutEffect } from "react";
 import styles from "./Portal.module.css";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "motion/react";
@@ -18,7 +18,9 @@ export const Portal: FC<IPortalProps> = ({
 	zIndex = 1000,
 	layoutPosition = "bottom",
 }) => {
-	useEffect(() => {
+	useLayoutEffect(() => {
+		console.log({ isShow });
+
 		if (isShow) {
 			document.body.style.overflow = "hidden";
 		}

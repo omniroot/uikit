@@ -90,9 +90,14 @@ export const BottomSheet: FC<IBottomSheetProps> = ({
 
 		if (isShow && bottomSheetRef.current) {
 			console.log(bottomSheetRef.current.clientHeight);
+			document.body.style.overflow = "hidden";
 
 			setOriginalHeight(bottomSheetRef.current.clientHeight);
 		}
+
+		return () => {
+			document.body.style.overflow = "auto";
+		};
 	}, [isShow, bottomSheetRef]);
 
 	const _class = clsx(styles.bottom_sheet, className);
