@@ -22,14 +22,14 @@
 }
 
 .button[data-variant="primary"] {
-	color: var(--color-alttext);
-	background-color: var(--color-primary);
+	color: var(--on_primary);
+	background-color: var(--primary);
 }
 
 .button[data-variant="outline"] {
-	color: var(--color-text);
+	color: var(--on_surface_container);
 	background-color: transparent;
-	border: 2px solid var(--color-secondary);
+	border: 2px solid var(--surface_container);
 
 	@media (hover: hover) {
 		&:hover {
@@ -40,13 +40,18 @@
 }
 
 .button[data-variant="secondary"] {
-	color: var(--color-text);
-	background-color: var(--color-secondary);
+	color: var(--on_secondary);
+	background-color: var(--secondary);
+}
+
+.button[data-variant="tertiary"] {
+	color: var(--on_tertiary);
+	background-color: var(--tertiary);
 }
 
 .button[data-variant="background"] {
-	color: var(--color-primary);
-	background-color: var(--color-background);
+	color: var(--on_background);
+	background-color: var(--background);
 }
 
 .button[data-variant="delete"] {
@@ -55,7 +60,7 @@
 }
 
 .button[data-variant="ghost"] {
-	color: var(--color-text);
+	color: var(--on_background);
 	background-color: transparent;
 
 	@media (hover: hover) {
