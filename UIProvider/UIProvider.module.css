@@ -1,0 +1,145 @@
+/* Matugen */
+:root {
+	--background: #1a1110;
+	--error: #ffb4ab;
+	--error_container: #93000a;
+	--inverse_on_surface: #392e2c;
+	--inverse_primary: #904b3e;
+	--inverse_surface: #f1dfdb;
+	--on_background: #f1dfdb;
+	--on_error: #690005;
+	--on_error_container: #ffdad6;
+	--on_primary: #561e14;
+	--on_primary_container: #ffdad3;
+	--on_primary_fixed: #3a0a04;
+	--on_primary_fixed_variant: #733428;
+	--on_secondary: #442a24;
+	--on_secondary_container: #ffdad3;
+	--on_secondary_fixed: #2c1511;
+	--on_secondary_fixed_variant: #5d3f3a;
+	--on_surface: #f1dfdb;
+	--on_surface_variant: #d8c2bd;
+	--on_tertiary: #3d2e04;
+	--on_tertiary_container: #fae0a6;
+	--on_tertiary_fixed: #251a00;
+	--on_tertiary_fixed_variant: #554519;
+	--outline: #a08c89;
+	--outline_variant: #534340;
+	--primary: #ffb4a6;
+	--primary_container: #733428;
+	--primary_fixed: #ffdad3;
+	--primary_fixed_dim: #ffb4a6;
+	--scrim: #000000;
+	--secondary: #e7bdb5;
+	--secondary_container: #5d3f3a;
+	--secondary_fixed: #ffdad3;
+	--secondary_fixed_dim: #e7bdb5;
+	--shadow: #000000;
+	--source_color: #ee715a;
+	--surface: #1a1110;
+	--surface_bright: #423735;
+	--surface_container: #271d1c;
+	--surface_container_high: #322826;
+	--surface_container_highest: #3d3230;
+	--surface_container_low: #231918;
+	--surface_container_lowest: #140c0b;
+	--surface_dim: #1a1110;
+	--surface_tint: #ffb4a6;
+	--surface_variant: #534340;
+	--tertiary: #dcc48c;
+	--tertiary_container: #554519;
+	--tertiary_fixed: #fae0a6;
+	--tertiary_fixed_dim: #dcc48c;
+}
+/* Matugen end  */
+
+/* Material 3 variables  */
+
+:root {
+	/* Display */
+	--font-size-display-large: 57px;
+	--font-size-display-medium: 45px;
+	--font-size-display-small: 36px;
+
+	--font-weight-display-large: regular;
+	--font-weight-display-medium: regular;
+	--font-weight-display-small: regular;
+
+	--line-height-display-large: 64px;
+	--line-height-display-medium: 52px;
+	--line-height-display-small: 44px;
+
+	--letter-spacing-display-large: -0.25px;
+	--letter-spacing-display-medium: 0px;
+	--letter-spacing-display-small: 0px;
+
+	/* Headline */
+	--font-size-headline-large: 32px;
+	--font-size-headline-medium: 28px;
+	--font-size-headline-small: 24px;
+
+	--font-weight-headline-large: regular;
+	--font-weight-headline-medium: regular;
+	--font-weight-headline-small: regular;
+
+	--line-height-headline-large: 40px;
+	--line-height-headline-medium: 36px;
+	--line-height-headline-small: 32px;
+
+	--letter-spacing-headline-large: 0px;
+	--letter-spacing-headline-medium: 0px;
+	--letter-spacing-headline-small: 0px;
+
+	/* Title */
+	--font-size-title-large: 22px;
+	--font-size-title-medium: 16px;
+	--font-size-title-small: 14px;
+
+	--font-weight-title-large: regular;
+	--font-weight-title-medium: medium;
+	--font-weight-title-small: medium;
+
+	--line-height-title-large: 28px;
+	--line-height-title-medium: 24px;
+	--line-height-title-small: 20px;
+
+	--letter-spacing-title-large: 0px;
+	--letter-spacing-title-medium: 0.15px;
+	--letter-spacing-title-small: 0.1px;
+
+	/* Body */
+	--font-size-body-large: 16px;
+	--font-size-body-medium: 14px;
+	--font-size-body-small: 12px;
+
+	--font-weight-body-large: regular;
+	--font-weight-body-medium: regular;
+	--font-weight-body-small: regular;
+
+	--line-height-body-large: 24px;
+	--line-height-body-medium: 20px;
+	--line-height-body-small: 16px;
+
+	--letter-spacing-body-large: 0.5px;
+	--letter-spacing-body-medium: 0.25px;
+	--letter-spacing-body-small: 0.4px;
+
+	/* Label */
+	--font-size-label-large: 14px;
+	--font-size-label-medium: 12px;
+	--font-size-label-small: 11px;
+
+	--font-weight-label-large: medium;
+	--font-weight-label-medium: medium;
+	--font-weight-label-small: medium;
+
+	--line-height-label-large: 20px;
+	--line-height-label-medium: 16px;
+	--line-height-label-small: 16px;
+
+	--letter-spacing-label-large: 0.1px;
+	--letter-spacing-label-medium: 0.5px;
+	--letter-spacing-label-small: 0.5px;
+}
+
+/* Material 3 variables end  */
