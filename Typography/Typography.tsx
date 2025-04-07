@@ -3,16 +3,30 @@ import { FC } from "react";
 
 interface ITypographyProps
 	extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
-	size?: "small" | "base" | "medium" | "large" | "xl" | "2xl" | "body" | "title";
-	color?: "text" | "subtext" | "subtext2";
-	weight?: "body" | "title";
+	variant?: "display" | "headline" | "title" | "body" | "label";
+	size?: "large" | "medium" | "small";
+	// weight?: "light" | "regular" | "medium" | "semibold" | "bold" | "extrabold" | "black";
+	color?:
+		| "primary"
+		| "primary_container"
+		| "secondary"
+		| "secondary_container"
+		| "tertiary"
+		| "tertiary_container"
+		| "error"
+		| "error_container"
+		| "surface"
+		| "surface_container"
+		| "surface_container_high"
+		| "";
 }
 export const Typography: FC<ITypographyProps> = ({
 	children,
 	className,
-	size = "body",
-	color = "body",
-	weight = "body",
+	variant = "body",
+	// weight = "regular",
+	size = "medium",
+	color = "surface",
 	...props
 }) => {
 	const _class = clsx(className);
@@ -20,9 +34,11 @@ export const Typography: FC<ITypographyProps> = ({
 		<span
 			className={_class}
 			style={{
-				fontSize: `var(--text-size-${size})`,
-				color: `var(--color-${color})`,
-				fontWeight: `var(--text-weight-${weight})`,
+				color: `var(--on_${color})`,
+				fontSize: `var(--font-size-${variant}-${size})`,
+				fontWeight: `var(--font-weight-${variant}-${size})`,
+				lineHeight: `var(--line-height-${variant}-${size})`,
+				letterSpacing: `var(--letter-spacing-${variant}-${size})`,
 			}}
 			{...props}
 		>
