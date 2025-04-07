@@ -17,8 +17,7 @@ interface ITypographyProps
 		| "error_container"
 		| "surface"
 		| "surface_container"
-		| "surface_container_high"
-		| "";
+		| "surface_container_high";
 }
 export const Typography: FC<ITypographyProps> = ({
 	children,
