@@ -1,0 +1,11 @@
+.fab_layout {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	gap: 12px;
+
+	position: fixed;
+	bottom: 90px;
+	right: 25px;
+}
