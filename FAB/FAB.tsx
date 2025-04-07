@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { FC } from "react";
 import styles from "./FAB.module.css";
+import { Button } from "@components/ui/Button/Button.tsx";
 
 interface IProps
 	extends React.DetailedHTMLProps<
@@ -22,8 +23,15 @@ export const FAB: FC<IProps> = ({
 
 	const _class = clsx(styles.fab, className);
 	return (
-		<button className={_class} data-variant={variant} data-size={size} onClick={onClick} {...rest}>
+		<Button
+			className={_class}
+			data-variant={variant}
+			shadow
+			data-size={size}
+			onClick={onClick}
+			{...rest}
+		>
 			{children}
-		</button>
+		</Button>
 	);
 };
