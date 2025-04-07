@@ -21,6 +21,14 @@
 	}
 }
 
+.button[data-shadow="true"] {
+	box-shadow: var(--box-shadow);
+
+	&:hover {
+		box-shadow: var(--box-shadow-hover);
+	}
+}
+
 .button[data-variant="primary"] {
 	color: var(--on_primary);
 	background-color: var(--primary);
@@ -62,13 +70,6 @@
 .button[data-variant="ghost"] {
 	color: var(--on_background);
 	background-color: transparent;
-
-	@media (hover: hover) {
-		&:hover {
-			color: var(--color-text);
-			background-color: var(--color-ternary);
-		}
-	}
 }
 
 .button[data-aslink="true"] {

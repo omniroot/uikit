@@ -24,6 +24,7 @@ interface IButtonProps
 		| "delete"
 		| "nhentai"
 		| "shikimori";
+	shadow?: boolean;
 	circle?: boolean;
 }
 
@@ -35,6 +36,7 @@ export const Button: FC<IButtonProps> = ({
 	asLink = false,
 	variant = "primary",
 	circle = false,
+	shadow = false,
 	...rest
 }) => {
 	const _class = clsx(styles.button, className);
@@ -48,6 +50,7 @@ export const Button: FC<IButtonProps> = ({
 			data-variant={variant}
 			data-circle={circle}
 			data-aslink={asLink}
+			data-shadow={shadow}
 			{...rest}
 		>
 			{loading && <Loader width={24} height={24} />}
@@ -68,6 +71,7 @@ interface BasicLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 		| "hanime"
 		| "nhentai"
 		| "shikimori";
+	shadow?: boolean;
 	circle?: boolean;
 }
 
