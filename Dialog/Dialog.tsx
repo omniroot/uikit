@@ -23,9 +23,7 @@ export const Dialog: FC<IDialogProps> = ({
 		<Portal isShow={isShow} onClose={() => onCancel?.()} layoutPosition="center">
 			<div className={styles.content}>
 				<div className={styles.dialog}>
-					<Typography weight="title" size="title">
-						{title}
-					</Typography>
+					<Typography variant="title">{title}</Typography>
 					<Typography className={styles.description}>{description}</Typography>
 					<div className={styles.actions}>
 						<Button onClick={onCancel} variant="ghost">

@@ -20,9 +20,7 @@ export const HeadingSection: FC<IHeadingSectionProps> = ({
 	return (
 		<div className={_class}>
 			<div className={styles.header}>
-				<Typography size="title" weight="title">
-					{title}
-				</Typography>
+				<Typography variant="headline">{title}</Typography>
 				<div className={styles.actions}>{actionsSlot}</div>
 			</div>
 			<div className={styles.content}>{children}</div>

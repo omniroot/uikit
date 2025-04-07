@@ -1,7 +1,7 @@
-import { ReactNode, FC, useEffect, useLayoutEffect } from "react";
-import styles from "./Portal.module.css";
-import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "motion/react";
+import { FC, ReactNode, useLayoutEffect } from "react";
+import { createPortal } from "react-dom";
+import styles from "./Portal.module.css";
 
 interface IPortalProps {
 	children?: ReactNode;

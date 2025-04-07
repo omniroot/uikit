@@ -1,7 +1,6 @@
 import clsx from "clsx";
-import styles from "./FAB.module.css";
 import { FC } from "react";
-import { Portal } from "@components/ui/Portal/Portal.tsx";
+import styles from "./FAB.module.css";
 
 interface IProps
 	extends React.DetailedHTMLProps<

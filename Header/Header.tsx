@@ -14,9 +14,7 @@ export const Header = () => {
 			<AnimatePresence mode="popLayout">
 				<div className={styles.left}>
 					{icon && icon}
-					<Typography size="title" weight="title">
-						{title}
-					</Typography>
+					<Typography variant="headline">{title}</Typography>
 				</div>
 			</AnimatePresence>
 			<div className={styles.right}>
