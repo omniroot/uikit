@@ -4,7 +4,7 @@
 	background-color: transparent;
 	border: 2px solid var(--color-secondary);
 	border-radius: 12px;
-	padding: 8px 12px;
+	padding: 12px 12px;
 	transition: var(--animation);
 
 	&:focus-within {
