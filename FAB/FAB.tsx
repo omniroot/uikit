@@ -15,12 +15,11 @@ interface IProps
 export const FAB: FC<IProps> = ({
 	className,
 	children,
+	onClick,
 	variant = "primary",
 	size = "normal",
 	...rest
 }) => {
-	const onClick = () => {};
-
 	const _class = clsx(styles.fab, className);
 	return (
 		<Button

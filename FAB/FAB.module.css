@@ -6,19 +6,10 @@
 	gap: 6px;
 
 	font-weight: bold;
-	border: none;
-	font-size: var(--text-size-body);
 	font-family: inherit;
 
 	cursor: pointer;
 	border-radius: 18px;
-	transition: var(--animation);
-	box-shadow: var(--box-shadow);
-
-	&:hover {
-		scale: 1.05;
-		box-shadow: var(--box-shadow-hover);
-	}
 
 	&[data-variant="primary"] {
 		color: var(--on_primary_container);
