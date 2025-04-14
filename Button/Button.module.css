@@ -16,8 +16,16 @@
 
 	text-decoration: none;
 
+	&:hover {
+		scale: 1.05;
+	}
+
 	&:active {
-		scale: 95%;
+		scale: 0.95;
+	}
+
+	* {
+		cursor: pointer;
 	}
 }
 
@@ -38,13 +46,6 @@
 	color: var(--on_surface_container);
 	background-color: transparent;
 	border: 2px solid var(--surface_container);
-
-	@media (hover: hover) {
-		&:hover {
-			/* border: 2px solid var(--color-secondary); */
-			/* background-color: var(--color-ternary); */
-		}
-	}
 }
 
 .button[data-variant="secondary"] {
@@ -111,7 +112,7 @@
 
 	&:hover {
 		color: var(--color-text);
-		background-color: var(--color-animego)-hover;
+		background-color: var(--color-animego-hover);
 	}
 }
 .button[data-variant="hanime"] {
@@ -120,7 +121,7 @@
 
 	&:hover {
 		color: var(--color-text);
-		background-color: var(--color-hanime)-hover;
+		background-color: var(--color-hanime-hover);
 	}
 }
 .button[data-variant="nhentai"] {
@@ -129,7 +130,7 @@
 
 	&:hover {
 		color: var(--color-text);
-		background-color: var(--color-nhentai)-hover;
+		background-color: var(--color-nhentai-hover);
 	}
 }
 
@@ -139,6 +140,6 @@
 
 	&:hover {
 		color: var(--color-primary);
-		background-color: var(--color-shikimori)-hover;
+		background-color: var(--color-shikimori-hover);
 	}
 }

@@ -1,8 +1,10 @@
+import { useMaterialTheme } from "@/shared/MaterialTheme/MaterialTheme.tsx";
+import { css } from "@emotion/react";
 import { createLink } from "@tanstack/react-router";
+import { Loader } from "@ui/Loader/Loader.tsx";
 import clsx from "clsx";
 import React, { FC } from "react";
 import styles from "./Button.module.css";
-import { Loader } from "@ui/Loader/Loader.tsx";
 
 interface IButtonProps
 	extends React.DetailedHTMLProps<
@@ -17,11 +19,12 @@ interface IButtonProps
 		| "secondary"
 		| "tertiary"
 		| "background"
+		| "delete"
+		| "error"
 		| "ghost"
 		| "gradient"
 		| "animego"
 		| "hanime"
-		| "delete"
 		| "nhentai"
 		| "shikimori";
 	shadow?: boolean;
@@ -39,8 +42,14 @@ export const Button: FC<IButtonProps> = ({
 	shadow = false,
 	...rest
 }) => {
-	const _class = clsx(styles.button, className);
+	const { getVar } = useMaterialTheme();
 
+	const _style = css`
+		color: ${getVar(variant)};
+		background-color: ${getVar(variant, "background")};
+	`;
+
+	const _class = clsx(styles.button, _style, className);
 	return (
 		<button
 			className={_class}
