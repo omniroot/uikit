@@ -21,8 +21,8 @@ export const Accordion: FC<IProps> = ({ children, title, defaultOpen = false }) 
 
 	const _class = clsx(styles.accordion);
 	return (
-		<motion.div layout className={_class} onClick={toggleIsOpen}>
-			<div className={styles.header}>
+		<motion.div className={_class}>
+			<div className={styles.header} onClick={toggleIsOpen}>
 				<Typography variant="title" size="large">
 					{title}
 				</Typography>
@@ -35,18 +35,35 @@ export const Accordion: FC<IProps> = ({ children, title, defaultOpen = false }) 
 					/>
 				</Button>
 			</div>
-			<AnimatePresence mode="popLayout">
+			<AnimatePresence mode="sync">
 				{isOpen && (
 					<motion.div
 						className={styles.content}
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
+						initial={{ height: 0, visibility: "hidden" }}
+						animate={
+							isOpen
+								? { height: "auto", visibility: "visible" }
+								: { height: 0, visibility: "hidden" }
+						}
+						exit={{ visibility: "hidden", height: 0 }}
+						transition={{ duration: 0.25 }}
 					>
 						{children}
+						<Button variant="primary" style={{ width: "100%" }}>
+							<Typography color="primary">Collapse</Typography>
+							<RightArrowIcon
+								style={{
+									transition: "transform 150ms",
+									transform: isOpen ? "rotateZ(90deg)" : "rotateZ(0deg)",
+								}}
+							/>
+						</Button>
 					</motion.div>
 				)}
 			</AnimatePresence>
+			{/* {isOpen && (
+				
+			)} */}
 		</motion.div>
 	);
 };
