@@ -6,12 +6,9 @@
 	align-items: center;
 
 	font-size: var(--text-size-small);
-	/* color: var(--color-background);
-	background-color: var(--color-primary); */
 
-	color: var(--color-text);
-	background-color: var(--color-secondary);
-	/* border: 2px solid var(--color-primary); */
+	color: var(--md-on-tertiary);
+	background-color: var(--md-tertiary);
 	border-radius: 16px;
 	gap: 4px;
 	padding: 4px 8px;
