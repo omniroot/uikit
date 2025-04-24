@@ -10,7 +10,7 @@
 
 	cursor: pointer;
 	border-radius: 18px;
-
+	/* 
 	&[data-variant="primary"] {
 		color: var(--on_primary_container);
 		background-color: var(--primary_container);
@@ -26,7 +26,7 @@
 	&[data-variant="surface"] {
 		color: var(--on_surface);
 		background-color: var(--surface_container);
-	}
+	} */
 
 	&[data-size="small"] {
 		min-width: 40px;
