@@ -15,7 +15,8 @@
 		align-items: center;
 		gap: 8px;
 
-		background-color: var(--color-secondary);
+		color: var(--md-on-tertiary-container);
+		background-color: var(--md-tertiary-container);
 		border-radius: 16px;
 		padding: 4px 8px;
 		z-index: 100000;
