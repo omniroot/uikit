@@ -49,7 +49,7 @@ export const Accordion: FC<IProps> = ({ children, title, defaultOpen = false }) 
 						transition={{ duration: 0.25 }}
 					>
 						{children}
-						<Button variant="primary" style={{ width: "100%" }}>
+						<Button variant="primary" style={{ width: "100%" }} onClick={toggleIsOpen}>
 							<Typography color="primary">Collapse</Typography>
 							<RightArrowIcon
 								style={{

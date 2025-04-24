@@ -14,7 +14,7 @@
 		transition: var(--animation);
 
 		&:hover {
-			background-color: var(--md-sys-color-surface-variant);
+			background-color: var(--md-surface-variant);
 		}
 	}
 
