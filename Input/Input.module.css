@@ -2,13 +2,17 @@
 	display: flex;
 	justify-content: space-between;
 	background-color: transparent;
-	border: 2px solid var(--color-secondary);
+	border: 2px solid var(--md-surface-container);
 	border-radius: 12px;
 	padding: 12px 12px;
 	transition: var(--animation);
 
+	&:hover {
+		border: 2px solid var(--md-surface-variant);
+	}
+
 	&:focus-within {
-		border: 2px solid var(--color-primary);
+		border: 2px solid var(--md-primary);
 	}
 	.input {
 		width: 100%;
