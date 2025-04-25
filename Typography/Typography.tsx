@@ -5,7 +5,7 @@ interface ITypographyProps
 	extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
 	variant?: "display" | "headline" | "title" | "body" | "label";
 	size?: "large" | "medium" | "small";
-	// weight?: "light" | "regular" | "medium" | "semibold" | "bold" | "extrabold" | "black";
+	weight?: "light" | "regular" | "medium" | "semibold" | "bold" | "extrabold" | "black";
 	color?:
 		| "primary"
 		| "primary_container"
@@ -23,7 +23,7 @@ export const Typography: FC<ITypographyProps> = ({
 	children,
 	className,
 	variant = "body",
-	// weight = "regular",
+	weight = "regular",
 	size = "medium",
 	color = "surface",
 	...props
@@ -35,7 +35,7 @@ export const Typography: FC<ITypographyProps> = ({
 			style={{
 				color: `var(--on_${color})`,
 				fontSize: `var(--font-size-${variant}-${size})`,
-				fontWeight: `var(--font-weight-${variant}-${size})`,
+				fontWeight: weight,
 				lineHeight: `var(--line-height-${variant}-${size})`,
 				letterSpacing: `var(--letter-spacing-${variant}-${size})`,
 			}}
