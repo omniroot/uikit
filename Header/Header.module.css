@@ -24,14 +24,14 @@
 		}
 
 		svg {
-			color: var(--color-primary);
+			color: var(--md-primary);
 		}
 	}
 
 	.right {
 		gap: 8px;
 		svg {
-			color: var(--color-primary);
+			color: var(--md-primary);
 		}
 	}
 }
