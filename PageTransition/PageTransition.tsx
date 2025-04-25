@@ -31,13 +31,11 @@ export const PageTransition: FC<IPageTransitionProps> = ({ children }) => {
 
 	return (
 		<motion.div
-			// initial="initial"
 			animate={isDone ? "in" : "out"}
 			exit="out"
 			variants={variants}
 			transition={{ duration: 0.5, type: "spring" }}
 		>
-			{String(isDone)}
 			{children}
 		</motion.div>
 	);
