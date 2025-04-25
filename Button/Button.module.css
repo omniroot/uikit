@@ -38,24 +38,29 @@
 }
 
 .button[data-variant="primary"] {
-	color: var(--on_primary);
-	background-color: var(--primary);
+	color: var(--md-on-primary);
+	background-color: var(--md-primary);
 }
 
 .button[data-variant="outline"] {
-	color: var(--on_surface_container);
+	color: var(--md-on-surface);
 	background-color: transparent;
-	border: 2px solid var(--surface_container);
+	border: 2px solid var(--md-surface-container);
+
+	&:hover {
+		scale: 1;
+		border: 2px solid var(--md-surface-variant);
+	}
 }
 
 .button[data-variant="secondary"] {
-	color: var(--on_secondary);
-	background-color: var(--secondary);
+	color: var(--md-on-secondary);
+	background-color: var(--md-secondary);
 }
 
 .button[data-variant="tertiary"] {
-	color: var(--on_tertiary);
-	background-color: var(--tertiary);
+	color: var(--md-on-tertiary);
+	background-color: var(--md-tertiary);
 }
 
 .button[data-variant="background"] {
@@ -71,6 +76,10 @@
 .button[data-variant="ghost"] {
 	color: var(--on_background);
 	background-color: transparent;
+
+	&:hover {
+		background-color: var(--md-color-sys-surface-variant);
+	}
 }
 
 .button[data-aslink="true"] {
@@ -83,6 +92,12 @@
 		font-size: var(--text-size-body);
 		color: var(--color-text);
 		padding: 4px 8px;
+		border-radius: 16px;
+		transition: var(--animation);
+
+		&:hover {
+			background-color: var(--md-surface-variant);
+		}
 	}
 }
 
