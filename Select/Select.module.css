@@ -7,7 +7,7 @@
 .selectInput {
 	width: 100%;
 	padding: 8px 12px;
-	border: 2px solid var(--color-secondary);
+	border: 2px solid var(--md-surface-container);
 	border-radius: 12px;
 	gap: 4px;
 	color: var(--color-text);
@@ -17,12 +17,16 @@
 	justify-content: space-between;
 	align-items: center;
 	user-select: none;
+
+	&:hover {
+		border: 2px solid var(--md-surface-variant);
+	}
 }
 
 .selectInput:focus {
 	outline: none;
-	border-color: var(--color-primary);
-	box-shadow: 0 0 0 1px var(--color-primary);
+	border-color: var(--md-primary);
+	box-shadow: 0 0 0 1px var(--md-shadow);
 }
 
 .optionsContainer {
@@ -36,25 +40,26 @@
 	overflow-y: auto;
 	margin-left: 1.5%;
 	/* margin-top: 45px; */
-	border: 2px solid var(--color-secondary);
+	border: 2px solid var(--md-surface-container);
 	border-radius: 12px;
-	background-color: var(--color-background);
+	background-color: var(--md-surface);
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .optionItem {
 	padding: 8px 12px;
 	cursor: pointer;
-	color: var(--color-text);
+	color: var(--md-on-surface);
 	border-radius: 8px;
 }
 
 .optionItem:hover {
-	background-color: var(--color-secondary);
+	background-color: var(--md-surface-variant);
 }
 
 .optionItem.active {
-	background-color: var(--color-primary);
+	color: var(--md-on-primary);
+	background-color: var(--md-primary);
 }
 
 .arrow {
