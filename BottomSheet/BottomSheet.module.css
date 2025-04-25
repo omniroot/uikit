@@ -6,8 +6,8 @@
 	cursor: default;
 
 	overflow-y: scroll;
-	background-color: var(--color-background);
-	border: 2px solid var(--color-secondary);
+	background-color: var(--md-surface);
+	border: 2px solid var(--md-surface-container);
 	border-radius: 16px;
 	transition: height 200ms;
 	overflow: hidden;
@@ -24,7 +24,7 @@
 			width: 10%;
 			height: 6px;
 			border-radius: 16px;
-			background-color: var(--color-ternary);
+			background-color: var(--md-primary);
 			transition: var(--animation);
 		}
 	}

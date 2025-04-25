@@ -122,7 +122,7 @@ export const BottomSheet: FC<IBottomSheetProps> = ({
 					<div className={styles.indicator} ref={indicatorRef}></div>
 				</div>
 				{title && (
-					<Typography variant="title" className={styles.title}>
+					<Typography variant="title" size="large" className={styles.title}>
 						{title}
 					</Typography>
 				)}
