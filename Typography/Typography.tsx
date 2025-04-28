@@ -33,7 +33,7 @@ export const Typography: FC<ITypographyProps> = ({
 		<span
 			className={_class}
 			style={{
-				color: `var(--on_${color})`,
+				color: `var(--md-on-${color})`,
 				fontSize: `var(--font-size-${variant}-${size})`,
 				fontWeight: weight,
 				lineHeight: `var(--line-height-${variant}-${size})`,
