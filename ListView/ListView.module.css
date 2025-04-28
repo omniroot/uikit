@@ -1,0 +1,23 @@
+.list_view {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+
+	& > * {
+		padding: 12px;
+		border-radius: 10px;
+		color: var(--md-on-surface);
+		background-color: var(--md-surface-container);
+	}
+
+	& > *:first-child {
+		border-top-left-radius: 18px;
+		border-top-right-radius: 18px;
+	}
+
+	& > *:last-child {
+		border-bottom-left-radius: 18px;
+		border-bottom-right-radius: 18px;
+	}
+}
