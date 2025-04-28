@@ -1,4 +1,4 @@
 .divider {
-	background-color: var(--md-outline);
+	background-color: var(--md-surface-container);
 	border-radius: 16px;
 }
