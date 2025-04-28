@@ -2,7 +2,7 @@ import { Portal } from "@components/ui/Portal/Portal.tsx";
 import { Typography } from "@components/ui/Typography/Typography.tsx";
 import clsx from "clsx";
 import { motion } from "motion/react";
-import { FC, MouseEvent, ReactNode, useEffect, useRef, useState } from "react";
+import { FC, MouseEvent, ReactNode, useEffect, useRef } from "react";
 import styles from "./BottomSheet.module.css";
 
 interface IBottomSheetProps {
@@ -24,75 +24,72 @@ export const BottomSheet: FC<IBottomSheetProps> = ({
 }) => {
 	const bottomSheetRef = useRef<HTMLDivElement>(null);
 	const indicatorRef = useRef<HTMLDivElement>(null);
-	const [originalHeight, setOriginalHeight] = useState(200);
 	const onBottomSheetClick = (event: MouseEvent<HTMLDivElement>) => {
 		event.stopPropagation();
 	};
 
-	const onTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
-		// event.stopPropagation();
+	// const onTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
+	// 	// event.stopPropagation();
 
-		if (bottomSheetRef.current && indicatorRef.current) {
-			// console.log(bottomSheetRef);
-			// const sheetHeight = bottomSheetRef.current.clientHeight;
-			const newSheetHeight = document.documentElement.clientHeight - event.touches[0].clientY;
-			// console.log(newSheetHeight);
-			bottomSheetRef.current.style.transition = `height 70ms`;
+	// 	if (bottomSheetRef.current && indicatorRef.current) {
+	// 		// console.log(bottomSheetRef);
+	// 		// const sheetHeight = bottomSheetRef.current.clientHeight;
+	// 		const newSheetHeight = document.documentElement.clientHeight - event.touches[0].clientY;
+	// 		// console.log(newSheetHeight);
+	// 		bottomSheetRef.current.style.transition = `height 70ms`;
 
-			bottomSheetRef.current.style.height = `${newSheetHeight}px`;
-			indicatorRef.current.style.width = `15%`;
-			// console.log(event.touches[0].clientY);
-		}
-	};
+	// 		bottomSheetRef.current.style.height = `${newSheetHeight}px`;
+	// 		indicatorRef.current.style.width = `15%`;
+	// 		// console.log(event.touches[0].clientY);
+	// 	}
+	// };
 
-	const onTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
-		// event.stopPropagation();
+	// const onTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+	// 	// event.stopPropagation();
 
-		// TODO: Rewrite it for using touch cooridante instead of bottomSheet Height
+	// 	// TODO: Rewrite it for using touch cooridante instead of bottomSheet Height
 
-		if (bottomSheetRef.current && indicatorRef.current) {
-			bottomSheetRef.current.style.transition = `height 350ms`;
-			indicatorRef.current.style.width = `10%`;
+	// 	if (bottomSheetRef.current && indicatorRef.current) {
+	// 		bottomSheetRef.current.style.transition = `height 350ms`;
+	// 		indicatorRef.current.style.width = `10%`;
 
-			// console.log(bottomSheetRef);
+	// 		// console.log(bottomSheetRef);
 
-			// Close if the sheet is too small
-			if (originalHeight < 400 && bottomSheetRef.current.clientHeight < originalHeight / 1.5) {
-				console.log("small 1");
-				bottomSheetRef.current.style.height = `0`;
+	// 		// Close if the sheet is too small
+	// 		if (originalHeight < 400 && bottomSheetRef.current.clientHeight < originalHeight / 1.5) {
+	// 			console.log("small 1");
+	// 			bottomSheetRef.current.style.height = `0`;
 
-				onOutsideClick();
-			}
+	// 			onOutsideClick();
+	// 		}
 
-			if (originalHeight > 401 && event.changedTouches[0].clientY < originalHeight / 2) {
-				console.log("small 2");
-				bottomSheetRef.current.style.height = `0`;
+	// 		if (originalHeight > 401 && event.changedTouches[0].clientY < originalHeight / 2) {
+	// 			console.log("small 2");
+	// 			bottomSheetRef.current.style.height = `0`;
 
-				onOutsideClick();
-				return;
-			}
+	// 			onOutsideClick();
+	// 			return;
+	// 		}
 
-			// Maximize if the sheet is too big
-			if (bottomSheetRef.current.clientHeight > document.documentElement.clientHeight / 1.5) {
-				console.log("big");
+	// 		// Maximize if the sheet is too big
+	// 		if (bottomSheetRef.current.clientHeight > document.documentElement.clientHeight / 1.5) {
+	// 			console.log("big");
 
-				bottomSheetRef.current.style.height = `100%`;
-				return;
-			}
-			console.log("nothing");
+	// 			bottomSheetRef.current.style.height = `100%`;
+	// 			return;
+	// 		}
+	// 		console.log("nothing");
 
-			bottomSheetRef.current.style.height = `${originalHeight + 2}px`;
-		}
-	};
+	// 		bottomSheetRef.current.style.height = `${originalHeight + 2}px`;
+	// 	}
+	// };
 
 	useEffect(() => {
 		console.log("use eefct");
 
-		if (isShow && bottomSheetRef.current) {
-			console.log(bottomSheetRef.current.clientHeight);
+		if (isShow) {
+			console.log(bottomSheetRef?.current?.clientHeight);
 			document.body.style.overflow = "hidden";
-
-			setOriginalHeight(bottomSheetRef.current.clientHeight);
 		}
 
 		return () => {
@@ -115,8 +112,8 @@ export const BottomSheet: FC<IBottomSheetProps> = ({
 			>
 				<div
 					className={styles.indicator_container}
-					onTouchMove={onTouchMove}
-					onTouchEnd={onTouchEnd}
+					// onTouchMove={onTouchMove}
+					// onTouchEnd={onTouchEnd}
 				>
 					{/* {originalHeight} */}
 					<div className={styles.indicator} ref={indicatorRef}></div>
