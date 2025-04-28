@@ -19,7 +19,7 @@
 		align-items: center;
 
 		padding: 8px 6px;
-		background-color: var(--color-secondary);
+		background-color: var(--md-surface-container);
 		border-radius: 32px;
 		cursor: pointer;
 		transition: background-color 300ms;
@@ -32,12 +32,12 @@
 		.state {
 			width: 20px;
 			height: 20px;
-			background-color: var(--color-ternary);
+			background-color: var(--md-surface-container-high);
 			border-radius: 50%;
 			transition: background-color 300ms;
 
 			&[data-enabled="true"] {
-				background-color: var(--color-primary);
+				background-color: var(--md-primary);
 			}
 
 			&[data-disabled="true"] {

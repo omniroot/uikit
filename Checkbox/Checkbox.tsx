@@ -1,7 +1,7 @@
+import { CheckIcon } from "@/shared/assets/icons/CheckIcon.tsx";
+import { motion } from "motion/react";
 import { FC } from "react";
 import styles from "./Checkbox.module.css";
-import { motion } from "motion/react";
-import { CheckIcon } from "@/shared/assets/icons/CheckIcon.tsx";
 
 interface ICheckboxProps {
 	checked: boolean;

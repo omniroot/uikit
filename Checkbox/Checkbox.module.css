@@ -14,19 +14,22 @@
 	}
 
 	.indicator {
-		width: 24px;
-		height: 24px;
+		/* width: 24px; */
+		/* height: 24px; */
+		width: 100%;
+		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		border-radius: 8px;
-		border: 2px solid var(--color-ternary);
-		transition: border-radius 150ms;
+		color: var(--md-on-primary);
+		border: 2px solid var(--md-surface-container);
+		transition: border-radius 250ms, background-color 250ms, color 250ms;
 	}
 
 	.input:checked + .indicator {
-		background-color: var(--color-primary);
-		border-color: var(--color-primary);
-		border-radius: 50%;
+		background-color: var(--md-primary);
+		border-color: var(--md-primary);
+		/* border-radius: 50%; */
 	}
 }

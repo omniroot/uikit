@@ -23,7 +23,9 @@ export const Switch: FC<ISwitchProps> = ({ title, state, onChange, disabled, rig
 
 	return (
 		<div className={styles.switch}>
-			<Typography size="medium">{title}</Typography>
+			<Typography variant="title" size="large">
+				{title}
+			</Typography>
 			<div className={styles.right}>
 				{rightSlot}
 				<motion.div
