@@ -8,6 +8,7 @@ interface IProps
 	extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	color?: IUIColor;
 	backgroundColor?: IUIColor;
+	gap?: string;
 	radius?: "small" | "medium" | "large";
 	orientation?: "vertical" | "horizontal";
 	justifyContent?:
@@ -31,11 +32,13 @@ export const Box: FC<IProps> = ({
 	children,
 	className,
 	color,
+	gap,
 	radius = "medium",
 	backgroundColor,
 	orientation = "horizontal",
 	justifyContent = "flex-start",
 	alignItems = "flex-start",
+	...rest
 }) => {
 	const { getVar } = useMaterialTheme();
 
@@ -46,9 +49,11 @@ export const Box: FC<IProps> = ({
 			style={{
 				justifyContent,
 				alignItems,
+				gap,
 				color: getVar(color),
 				backgroundColor: getVar(backgroundColor, "background"),
 			}}
+			{...rest}
 			data-orientation={orientation}
 			data-radius={radius}
 		>
