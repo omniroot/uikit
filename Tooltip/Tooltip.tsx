@@ -1,15 +1,20 @@
-import { FC, ReactNode, useState } from "react";
-import styles from "./Tooltip.module.css";
 import clsx from "clsx";
 import { motion } from "motion/react";
+import { FC, useState } from "react";
+import styles from "./Tooltip.module.css";
 
-interface ITooltipProps {
-	className?: string;
-	children: ReactNode;
+interface ITooltipProps
+	extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	title?: string;
 	position?: "top" | "bottom";
 }
-export const Tooltip: FC<ITooltipProps> = ({ className, children, title, position = "top" }) => {
+export const Tooltip: FC<ITooltipProps> = ({
+	className,
+	children,
+	title,
+	position = "top",
+	...rest
+}) => {
 	const [isHover, setIsHover] = useState(false);
 
 	const onTooltipMouseEnter = () => {
@@ -22,7 +27,12 @@ export const Tooltip: FC<ITooltipProps> = ({ className, children, title, positio
 	const _class = clsx(styles.tooltip_container, className);
 
 	return (
-		<div className={_class} onMouseEnter={onTooltipMouseEnter} onMouseLeave={onTooltipMouseLeave}>
+		<div
+			className={_class}
+			onMouseEnter={onTooltipMouseEnter}
+			onMouseLeave={onTooltipMouseLeave}
+			{...rest}
+		>
 			<motion.div
 				className={clsx(styles.tooltip)}
 				data-position={position}
