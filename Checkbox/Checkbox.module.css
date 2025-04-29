@@ -7,7 +7,7 @@
 	justify-content: center;
 
 	.input {
-		position: absolute;
+		position: fixed;
 		opacity: 0;
 		width: 0;
 		height: 0;
@@ -22,12 +22,13 @@
 		justify-content: center;
 		align-items: center;
 		border-radius: 8px;
-		color: var(--md-on-primary);
+		color: var(--md-surface);
 		border: 2px solid var(--md-surface-container);
-		transition: border-radius 250ms, background-color 250ms, color 250ms;
+		transition: border-radius 250ms, background-color 250ms, border-color 250ms;
 	}
 
 	.input:checked + .indicator {
+		color: var(--md-on-primary);
 		background-color: var(--md-primary);
 		border-color: var(--md-primary);
 		/* border-radius: 50%; */

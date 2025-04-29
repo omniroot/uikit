@@ -23,7 +23,7 @@ export const Checkbox: FC<ICheckboxProps> = ({ checked, onChange }) => {
 				animate={{ scale: 1 }}
 				transition={{ duration: 0.2 }}
 			>
-				{checked && <CheckIcon width={20} />}
+				{checked && <CheckIcon width={18} />}
 			</motion.div>
 		</div>
 	);
