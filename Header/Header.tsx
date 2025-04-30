@@ -9,6 +9,7 @@ import styles from "./Header.module.css";
 
 export const Header = () => {
 	const { title, icon } = useHeader();
+
 	return (
 		<header className={styles.header}>
 			<AnimatePresence mode="popLayout">
