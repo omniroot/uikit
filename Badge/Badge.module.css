@@ -7,8 +7,8 @@
 
 	font-size: var(--text-size-small);
 
-	color: var(--md-on-tertiary);
-	background-color: var(--md-tertiary);
+	color: var(--md-on-primary-container);
+	background-color: var(--md-primary-container);
 	border-radius: 16px;
 	gap: 4px;
 	padding: 4px 8px;
