@@ -1,0 +1,39 @@
+.bottom_navigation {
+	position: fixed;
+	bottom: 10px;
+	left: 50%;
+	translate: -50%;
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	gap: 4px;
+	background-color: var(--md-surface);
+	border: 2px solid var(--md-surface-container);
+	border-radius: 50px;
+	z-index: 100;
+
+	.bottom_navigation_item {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		color: var(--md-on-surface);
+		transition: var(--animation);
+
+		z-index: 3;
+
+		&:not(.active):hover {
+			color: var(--md-on-surface);
+			background-color: var(--md-surface-variant);
+		}
+
+		&.active {
+			color: var(--md-on-primary);
+			background-color: var(--md-primary);
+		}
+	}
+}

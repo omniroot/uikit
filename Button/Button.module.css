@@ -1,160 +1,171 @@
 .button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	width: fit-content;
-	padding: 8px 12px;
+  width: fit-content;
+  padding: 8px 12px;
 
-	border: 2px solid transparent;
-	border-radius: 16px;
-	gap: 4px;
-	font: inherit;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  gap: 4px;
+  font: inherit;
 
-	cursor: pointer;
-	transition: var(--animation);
+  transition: var(--animation);
 
-	text-decoration: none;
+  text-decoration: none;
+}
 
-	&:hover {
-	}
+.button:not([data-disabled="true"]):not([data-loading="true"]) {
+  cursor: pointer;
 
-	&:active {
-		transform: scale(0.95);
-	}
+  &:active {
+    transform: scale(0.95);
+  }
 
-	* {
-		cursor: pointer;
-	}
+  * {
+    cursor: pointer;
+  }
 }
 
 .button[data-shadow="true"] {
-	box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
 
-	&:hover {
-		box-shadow: var(--box-shadow-hover);
-	}
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+  }
 }
 
 .button[data-variant="primary"] {
-	color: var(--md-on-primary);
-	background-color: var(--md-primary);
+  color: var(--md-on-primary);
+  background-color: var(--md-primary);
 }
 
 .button[data-variant="outline"] {
-	color: var(--md-on-surface);
-	background-color: transparent;
-	border: 2px solid var(--md-surface-container);
+  color: var(--md-on-surface);
+  background-color: transparent;
+  border: 2px solid var(--md-surface-container);
 
-	&:hover {
-		border: 2px solid var(--md-surface-variant);
-	}
+  &:hover {
+    border: 2px solid var(--md-surface-variant);
+  }
 }
 
 .button[data-variant="secondary"] {
-	color: var(--md-on-secondary);
-	background-color: var(--md-secondary);
+  color: var(--md-on-secondary);
+  background-color: var(--md-secondary);
 }
 
 .button[data-variant="tertiary"] {
-	color: var(--md-on-tertiary);
-	background-color: var(--md-tertiary);
+  color: var(--md-on-tertiary);
+  background-color: var(--md-tertiary);
 }
 
 .button[data-variant="background"] {
-	color: var(--on_background);
-	background-color: var(--background);
+  color: var(--on_background);
+  background-color: var(--background);
 }
 
 .button[data-variant="delete"] {
-	color: var(--color-text);
-	background-color: var(--color-red);
+  color: var(--color-text);
+  background-color: var(--color-red);
 }
 
 .button[data-variant="ghost"] {
-	color: var(--on_background);
-	background-color: transparent;
+  color: var(--on_background);
+  background-color: transparent;
 
-	&:hover {
-		background-color: var(--md-color-sys-surface-variant);
-	}
+  &:hover {
+    background-color: var(--md-color-sys-surface-variant);
+  }
 }
 
 .button[data-aslink="true"] {
-	padding: 0;
-	> * {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-decoration: none;
-		font-size: var(--text-size-body);
-		color: var(--color-text);
-		padding: 4px 8px;
-		border-radius: 16px;
-		transition: var(--animation);
+  padding: 0;
+  > * {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: var(--text-size-body);
+    color: var(--color-text);
+    padding: 4px 8px;
+    border-radius: 16px;
+    transition: var(--animation);
 
-		&:hover {
-			background-color: var(--md-surface-variant);
-		}
-	}
+    &:hover {
+      background-color: var(--md-surface-variant);
+    }
+  }
 }
 
 .button[data-circle="true"] {
-	padding: 8px;
-	border-radius: 50%;
+  padding: 8px;
+  border-radius: 50%;
 }
 
 .button[data-disabled="true"] {
-	color: var(--color-subtext);
-	background-color: var(--color-ternary-80);
+  /* color: var(--color-subtext);
+  background-color: var(--color-ternary-80);
+	 */
+
+  filter: brightness(45%);
 }
 
 .button[data-variant="gradient"] {
-	color: var(--color-alttext);
-	background: linear-gradient(90deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
+  color: var(--color-alttext);
+  background: linear-gradient(
+    90deg,
+    hsla(298, 68%, 90%, 1) 0%,
+    hsla(30, 82%, 91%, 1) 100%
+  );
 
-	&:hover {
-		color: var(--color-alttext);
-		background: linear-gradient(180deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
-	}
+  &:hover {
+    color: var(--color-alttext);
+    background: linear-gradient(
+      180deg,
+      hsla(298, 68%, 90%, 1) 0%,
+      hsla(30, 82%, 91%, 1) 100%
+    );
+  }
 }
 
 .button[data-variant="animego"] {
-	color: var(--color-text);
-	background-color: var(--color-animego);
+  color: var(--color-text);
+  background-color: var(--color-animego);
 
-	&:hover {
-		color: var(--color-text);
-		background-color: var(--color-animego-hover);
-	}
+  &:hover {
+    color: var(--color-text);
+    background-color: var(--color-animego-hover);
+  }
 }
 .button[data-variant="hanime"] {
-	color: var(--color-text);
-	background-color: var(--color-hanime);
+  color: var(--color-text);
+  background-color: var(--color-hanime);
 
-	&:hover {
-		color: var(--color-text);
-		background-color: var(--color-hanime-hover);
-	}
+  &:hover {
+    color: var(--color-text);
+    background-color: var(--color-hanime-hover);
+  }
 }
 .button[data-variant="nhentai"] {
-	color: var(--color-text);
-	background-color: var(--color-nhentai);
+  color: var(--color-text);
+  background-color: var(--color-nhentai);
 
-	&:hover {
-		color: var(--color-text);
-		background-color: var(--color-nhentai-hover);
-	}
+  &:hover {
+    color: var(--color-text);
+    background-color: var(--color-nhentai-hover);
+  }
 }
 
 .button[data-variant="shikimori"] {
-	color: var(--color-primary);
-	background-color: var(--color-shikimori);
+  color: var(--color-primary);
+  background-color: var(--color-shikimori);
 
-	&:hover {
-		color: var(--color-primary);
-		background-color: var(--color-shikimori-hover);
-	}
+  &:hover {
+    color: var(--color-primary);
+    background-color: var(--color-shikimori-hover);
+  }
 }
